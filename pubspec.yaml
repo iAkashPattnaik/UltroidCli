@@ -1,0 +1,17 @@
+name: ultroid_cli
+description: A command-line interface for Ultroid.
+version: 1.0.0
+icon: icon.ico
+lisence: GNU Affero General Public
+homepage: https://github.com/BLUE-DEVIL1134/UltroidCli
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  colorize: ^3.0.0
+  http: ^0.13.3
+
+dev_dependencies:
+  pedantic: ^1.10.0
+  test: ^1.16.0

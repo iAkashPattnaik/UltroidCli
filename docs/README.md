@@ -30,3 +30,11 @@ This will act as a bridge between `root://TeamUltrod/.env` and the cli.
 - `ultroid env.set <key> <value>` - Append this set of data to [`root://TeamUltrod/.env`]
 - `ultroid env.get all` - Print all the values of [`root://TeamUltrod/.env`]
 - `ultroid env.create new` - Create a new [`.env`] file
+
+
+## Video Example
+
+
+https://user-images.githubusercontent.com/55914808/129194273-70ad7180-dfeb-4d1d-9de7-3874f09b0b93.mp4
+
+

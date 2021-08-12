@@ -11,7 +11,7 @@ import 'dart:io';
 // Ultroid
 import 'package:ultroid_cli/version.dart';
 
-void upgradeUltoid() async {
+void upgradeUltroid() async {
   final rootDirectory = Directory('./TeamUltroid');
   if (!rootDirectory.existsSync()) {
     print(

@@ -48,7 +48,7 @@ void main(List<String> arguments) async {
       init();
       break;
     case 'upgrade':
-      upgradeUltoid();
+      upgradeUltroid();
       break;
     case 'run':
       runUltroid();

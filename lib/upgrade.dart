@@ -25,7 +25,7 @@ void upgradeUltoid() async {
   await Process.run('git', ['clone', 'https://github.com/TeamUltroid/Ultroid', 'TeamUltroid'], runInShell: true);
   print(
     "${Colorize('Installing Ultroid Dependencies [ ').cyan()}"
-    "${Colorize('root://TeamUltroid/requirements.txt, root://TeamUltroid/package.json').lightMagenta()}"
+    "${Colorize('root://TeamUltroid/requirements.txt').lightMagenta()}"
     "${Colorize(' ]').cyan()}"
   );
   await Process.run(
@@ -33,14 +33,28 @@ void upgradeUltoid() async {
     runInShell: true,
     workingDirectory: rootDirectory.absolute.uri.toFilePath()
   );
-  await Process.run(
-    'npm', ['install'],
-    runInShell: true,
-    workingDirectory: rootDirectory.absolute.uri.toFilePath()
-  );
+  for (var eachRequirement in [
+    'fonttools',
+    'covid',
+    'gtts',
+    'pokedex.py',
+    'pyshorteners',
+    'pyfiglet',
+    'pyjokes',
+    'quotefancy',
+    'wikipedia',
+    'textblob',
+    'lyrics_extractor==3.0.1',
+  ]) {
+    await Process.run(
+      'pip', ['install', '-U', eachRequirement],
+      runInShell: true,
+      workingDirectory: rootDirectory.absolute.uri.toFilePath()
+    );
+  }
   print(
     "${Colorize('Successfully Installed Ultroid Dependencies [ ').cyan()}"
-    "${Colorize('root://TeamUltroid/requirements.txt, root://TeamUltroid/package.json').lightMagenta()}"
+    "${Colorize('root://TeamUltroid/requirements.txt').lightMagenta()}"
     "${Colorize(' ]').cyan()}"
   );
   print("Running [ ${Colorize('ultroid version').lightMagenta()} ]\n");

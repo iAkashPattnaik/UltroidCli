@@ -8,3 +8,7 @@ build/
 # Cuntom files and directories
 pubspec.lock
 bin/ultroid_cli.exe
+.env*
+
+# TeamUltroid
+TeamUltroid/

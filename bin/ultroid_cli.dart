@@ -18,8 +18,8 @@ void main(List<String> arguments) async {
   } catch (error) {
     query = 'help';
   }
-  for (var i in ['help', '-h', '--help', '-v', 'version', 'run', 'upgrade', 'init', 'delete']) {
-    if (i != query.toLowerCase()) {
+  for (var i in ['help', '-h', '--help', '-v', 'version', 'run', 'upgrade', 'init', 'delete', 'env']) {
+    if (!query.toLowerCase().startsWith(i)) {
       temp = 'help';
     } else {
       temp = i;
@@ -55,6 +55,9 @@ void main(List<String> arguments) async {
       break;
     case 'delete':
       deleteUltroid();
+      break;
+    case 'env':
+      dotEnvController(arguments);
       break;
     default:
       printHelp();

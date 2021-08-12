@@ -17,19 +17,24 @@ export 'package:ultroid_cli/version.dart';
 export 'package:ultroid_cli/run.dart';
 export 'package:ultroid_cli/upgrade.dart';
 export 'package:ultroid_cli/delete.dart';
+export 'package:ultroid_cli/env.dart';
 
 
 void ultroidCliVersion() async {
-  var req = await get(
-    Uri.parse('https://raw.githubusercontent.com/BLUE-DEVIL1134/UltroidCli/main/version.txt'),
-  );
-  if (req.body.trim() != '1.0.0') {
-    print(
-      "  ${Colorize('╔══════════════════════════════════════════════════════════════════════════╗').cyan()}\n"
-      "  ${Colorize('║').cyan()} A new version of UltroidCli is available!                                ${Colorize('║').cyan()}\n"
-      "  ${Colorize('║').cyan()}                                                                          ${Colorize('║').cyan()}\n"
-      "  ${Colorize('║').cyan()} Please download the lastest release.                                     ${Colorize('║').cyan()}\n"
-      "  ${Colorize('╚══════════════════════════════════════════════════════════════════════════╝').cyan()}"
+  try {
+    var req = await get(
+      Uri.parse('https://raw.githubusercontent.com/BLUE-DEVIL1134/UltroidCli/main/version.txt'),
     );
+    if (req.body.trim() != '1.0.1') {
+      print(
+        "  ${Colorize('╔══════════════════════════════════════════════════════════════════════════╗').cyan()}\n"
+        "  ${Colorize('║').cyan()} A new version of UltroidCli is available!                                ${Colorize('║').cyan()}\n"
+        "  ${Colorize('║').cyan()}                                                                          ${Colorize('║').cyan()}\n"
+        "  ${Colorize('║').cyan()} Please download the lastest release.                                     ${Colorize('║').cyan()}\n"
+        "  ${Colorize('╚══════════════════════════════════════════════════════════════════════════╝').cyan()}"
+      );
+    }
+  } catch (error) {
+    return;
   }
 }

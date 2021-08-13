@@ -18,7 +18,7 @@ jobs:
         run: dart pub get
       
       - name: Build Source
-        run: dart build exe bin/ultroid_cli.dart -o build/ultroid
+        run: dart compile exe bin/ultroid_cli.dart -o build/ultroid
         
       - name: Run Build
         run: ./ultroid

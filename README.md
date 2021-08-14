@@ -9,7 +9,7 @@ All kinds of contributions are reviewed and accepted.
 
 
 # What Is `UltroidCli` ?
-Well, we allknow that `The Ultroid` is currently the best / largest Telegram Userbot Present.
+Well, we all know that `The Ultroid` is currently the best / largest Telegram Userbot Present.
 
 So, as a former developer at `TeamUltroid`, I wanted to do something _out of the box_ to take `Ultroid` to the next level.
 

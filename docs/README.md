@@ -33,8 +33,7 @@ This will act as a bridge between `root://TeamUltrod/.env` and the cli.
 
 
 ## Video Example
-
-
 https://user-images.githubusercontent.com/55914808/129194273-70ad7180-dfeb-4d1d-9de7-3874f09b0b93.mp4
 
-
+## Dockerfile Example
+[Refer here for `Dockerfle` Example](https://github.com/BLUE-DEVIL1134/UltroidCli/blob/main/docs/Dockerfile)

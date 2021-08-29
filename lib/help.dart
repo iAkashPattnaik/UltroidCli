@@ -23,14 +23,14 @@ void printHelp() {
     '    ${Colorize("-v, version   Print the required and current Python version.").cyan()}\n'
     '\n'
     'Available commands:\n'
-    '    ${Colorize("init             :   ").cyan()}Install Ultroid To root://TeamUltroid.\n'
+    '    ${Colorize("init             :   ").cyan()}Install Ultroid to root://TeamUltroid.\n'
     '    ${Colorize("run              :   ").cyan()}Run Ultroid instantly.\n'
-    '    ${Colorize("upgrade          :   ").cyan()}Upgrade Ultroid to latest version.\n'
+    '    ${Colorize("upgrade          :   ").cyan()}Upgrade Ultroid to the latest version.\n'
     '    ${Colorize("-h, help         :   ").cyan()}Print this usage information.\n'
     '    ${Colorize("-v, version      :   ").cyan()}Print the version of all required dependencies.\n'
     '    ${Colorize("env.<key> <value>:   ").cyan()}Update [ ${Colorize("root://TeamUltroid/.env").green()} ] from cli.\n'
     '\n'
     '[ ${Colorize("Warning").green()} ]\n'
-    'Run \"${Colorize("ultroid delete").red()}\" only when advised by \"t.me/xditya\"\n'
+    'Run \"${Colorize("ultroid delete").red()}\" only when advised by the devs at \"https://t.me/UltroidSupport, or only if you know what it does !\"\n'
   );
 }

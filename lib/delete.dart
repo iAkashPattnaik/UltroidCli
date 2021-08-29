@@ -14,12 +14,12 @@ import 'package:ultroid_cli/version.dart';
 void deleteUltroid() async {
   final rootDirectory = Directory('./TeamUltroid');
   if (!rootDirectory.existsSync()) {
-    print(Colorize('Ultroid at [ ${Colorize("root://TeamUltroid").lightMagenta()} ] dosen\'t exists !').cyan());
+    print(Colorize('\"Ultroid\" at [ ${Colorize("root://TeamUltroid").lightMagenta()} ] does not exist !').cyan());
   } else {
-    print(Colorize('Removing Ultroid at [ ${Colorize("root://TeamUltroid").lightMagenta()} ]').cyan());
+    print(Colorize('Removing \"Ultroid\" at [ ${Colorize("root://TeamUltroid").lightMagenta()} ]').cyan());
     rootDirectory.deleteSync(recursive: true);
-    print(Colorize('Succesfully Removed Ultroid at [ ${Colorize("root://TeamUltroid").lightMagenta()} ]').cyan());
+    print(Colorize('Succesfully removed \"Ultroid\" at [ ${Colorize("root://TeamUltroid").lightMagenta()} ]').cyan());
   }
   version();
-  print(Colorize('To Install Ultroid, Use The Command [ ultroid init ]').lightGreen());
+  print(Colorize('To install \"Ultroid\", use the command [ ultroid init ]').lightGreen());
 }

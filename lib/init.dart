@@ -56,5 +56,5 @@ void init() async {
     );
   }
   version();
-  print(Colorize('To Run Ultroid, Use The Command [ ultroid run ]').lightGreen());
+  print(Colorize('To run Ultroid,use the command [ ultroid run ]').lightGreen());
 }

@@ -21,7 +21,7 @@ void upgradeUltroid() async {
     exit(1);
   }
   await rootDirectory.delete(recursive: true);
-  print(Colorize('Installing Upgraded Ultroid to [ ').cyan().toString() + Colorize('root://TeamUltroid').lightMagenta().toString() + Colorize(' ]').cyan().toString());
+  print(Colorize('Installing an upgraded version of Ultroid to [ ').cyan().toString() + Colorize('root://TeamUltroid').lightMagenta().toString() + Colorize(' ]').cyan().toString());
   await Process.run('git', ['clone', 'https://github.com/TeamUltroid/Ultroid', 'TeamUltroid'], runInShell: true);
   print(
     "${Colorize('Installing Ultroid Dependencies [ ').cyan()}"
@@ -59,5 +59,5 @@ void upgradeUltroid() async {
   );
   print("Running [ ${Colorize('ultroid version').lightMagenta()} ]\n");
   version();
-  print(Colorize('To Run Ultroid, Use The Command [ ultroid run ]').lightGreen());
+  print(Colorize('To run Ultroid, use the command [ ultroid run ]').lightGreen());
 }

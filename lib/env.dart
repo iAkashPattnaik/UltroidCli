@@ -12,19 +12,19 @@ void dotEnvController(List<String> cliArguments) {
   final filePath = './TeamUltroid/.env';
   final dotEnv = DotEnv(filePath: filePath);
   if (!dotEnv.exists()) {
-    print(Colorize('Env File Not Found ! [ ${Colorize(filePath).lightGreen()} ${Colorize("]").lightRed()}').lightRed());
+    print(Colorize('Env file not found ! [ ${Colorize(filePath).lightGreen()} ${Colorize("]").lightRed()}').lightRed());
   }
   if (cliArguments.length < 2 && cliArguments[0].contains('.')) {
     return print(Colorize('Usage: ${Colorize("ultroid env.<key> <value>").cyan()}').lightRed());
   }
   if (cliArguments[0].split('.')[1] == '') {
-    return print(Colorize('Error: Invalid Key Supplied !').lightRed());
+    return print(Colorize('Error: Invalid key supplied !').lightRed());
   }
   switch (cliArguments[0].split('.')[1]) {
     case 'create':
       print(['ultroid', 'env.create', 'new']);
       dotEnv.createNew(recrusive: true);
-      print(Colorize('New Env File Created ! [ ${Colorize(filePath).lightGreen()} ${Colorize("]").cyan()}').cyan());
+      print(Colorize('New env file created ! [ ${Colorize(filePath).lightGreen()} ${Colorize("]").cyan()}').cyan());
       break;
     case 'get':
       print(['ultroid', 'env.get', 'all']);

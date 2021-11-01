@@ -4,11 +4,15 @@
 
 # Conventional directory for build output.
 build/
+src/dist/
 
 # Cuntom files and directories
 pubspec.lock
 bin/ultroid_cli.exe
 .env*
+src/sessionGen.spec
+src/buildCommand.txt
+src/__pycache__/
 
 # TeamUltroid
 TeamUltroid/

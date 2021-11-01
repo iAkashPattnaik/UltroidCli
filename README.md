@@ -14,7 +14,7 @@ Well, we all know that `The Ultroid` is currently the best / largest Telegram Us
 So, as a former developer at `TeamUltroid`, I wanted to do something _out of the box_ to take `Ultroid` to the next level.
 
 
-# How To Use `UltroidCLi` ?
+# How To Use `UltroidCli` ?
 It's simple. Just download the latest build from the `Github Releases` and open a terminal in the download directory.
 
 Now, According to your OS, run the following command:
@@ -40,6 +40,13 @@ I am a smol dev, I don't hab MacOS
 ```
 Now, you can run the `UltroidCli` by typing `ultroid` in the terminal.
 
+
+# How to build `UltroidCli`
+It's super easy. Just clone the repo to a directory, say, `root:ultroid_cli`<br>
+Now, in `root:ultroid_cli` do `dart pub get`,<br>
+then in `root:ultroid_cli/src` do `pip install -r requirements.txt`.<br>
+Make sure you have `PyInstaller` installed!<br><br>
+Then, in `root:ultroid_cli` do `dart bin/build.dart`.
 
 # Contributions
 To contribute to this project, just fork it, make commits and make a pull request.

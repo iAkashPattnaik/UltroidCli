@@ -13,6 +13,10 @@ When you run `ultroid init` it will clone the `ultroid` repository and install a
 When you run `ultroid run` it will run the `ultroid` if exists wlse will prompt to use `ultroid init` first.
 
 
+## `ultroid session`
+When you run `ultroid session` it spawn a program to generate session string via **CLI**.
+
+
 ## `ultroid upgrade`
 When you run `ultroid upgrade` it will upgrade the current installation of ultroid to the latest one.
 

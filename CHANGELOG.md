@@ -1,3 +1,10 @@
+## 1.0.2
+ - Add `sessionGen` function
+ - Automate `build`
+ - Add `optional_requirements` of ultroid
+ - Update Docs for `session` function
+ - Fix a small typo in `run`
+
 ## 1.0.1
  - Add `env` option
  - Add `CHANGELOG.md` file

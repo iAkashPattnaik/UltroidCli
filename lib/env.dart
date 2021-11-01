@@ -22,12 +22,10 @@ void dotEnvController(List<String> cliArguments) {
   }
   switch (cliArguments[0].split('.')[1]) {
     case 'create':
-      print(['ultroid', 'env.create', 'new']);
       dotEnv.createNew(recrusive: true);
       print(Colorize('New env file created ! [ ${Colorize(filePath).lightGreen()} ${Colorize("]").cyan()}').cyan());
       break;
     case 'get':
-      print(['ultroid', 'env.get', 'all']);
       dotEnv.getDotEnv().forEach((String key, String value) {
         print(Colorize(key).lightMagenta().toString() + ' -> ' + Colorize(value).lightGreen().toString());
       });

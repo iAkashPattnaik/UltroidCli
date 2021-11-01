@@ -8,6 +8,8 @@
 import 'package:ultroid_cli/main.dart';
 import 'dart:io';
 
+import 'package:ultroid_cli/sessionGen.dart';
+
 void main(List<String> arguments) async {
   stdout.write('\x1B[2J\x1B[0;0H');
   ultroidCliVersion();
@@ -18,7 +20,19 @@ void main(List<String> arguments) async {
   } catch (error) {
     query = 'help';
   }
-  for (var i in ['help', '-h', '--help', '-v', 'version', 'run', 'upgrade', 'init', 'delete', 'env']) {
+  for (var i in [
+    'help',
+    '-h',
+    '--help',
+    '-v',
+    'version',
+    'run',
+    'session',
+    'upgrade',
+    'init',
+    'delete',
+    'env'
+  ]) {
     if (!query.toLowerCase().startsWith(i)) {
       temp = 'help';
     } else {
@@ -52,6 +66,9 @@ void main(List<String> arguments) async {
       break;
     case 'run':
       runUltroid();
+      break;
+    case 'session':
+      generateSession();
       break;
     case 'delete':
       deleteUltroid();

@@ -43,8 +43,9 @@ Now, you can run the `UltroidCli` by typing `ultroid` in the terminal.
 
 # How to build `UltroidCli`
 It's super easy. Just clone the repo to a directory, say, `root:ultroid_cli`<br>
-Now, in `root:ultroid_cli` do `dart pub get`, then in `root:ultroid_cli/src` do `pip install -r requirements.txt`.<br>
-make sure you have `PyInstaller` installed!<br><br>
+Now, in `root:ultroid_cli` do `dart pub get`,<br>
+then in `root:ultroid_cli/src` do `pip install -r requirements.txt`.<br>
+Make sure you have `PyInstaller` installed!<br><br>
 Then, in `root:ultroid_cli` do `dart bin/build.dart`.
 
 # Contributions

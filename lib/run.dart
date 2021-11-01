@@ -24,7 +24,8 @@ void runUltroid() async {
     exit(1);
   }
   await Process.start(
-    'python', ['-m', 'pyUltroid'],
+    'python',
+    ['-m', 'pyUltroid'],
     runInShell: true,
     workingDirectory: rootDirectory.absolute.uri.toFilePath(),
     mode: ProcessStartMode.inheritStdio,

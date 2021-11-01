@@ -25,6 +25,7 @@ void printHelp() {
     'Available commands:\n'
     '    ${Colorize("init             :   ").cyan()}Install Ultroid to root://TeamUltroid.\n'
     '    ${Colorize("run              :   ").cyan()}Run Ultroid instantly.\n'
+    '    ${Colorize("session          :   ").cyan()}Run Session Generator.\n'
     '    ${Colorize("upgrade          :   ").cyan()}Upgrade Ultroid to the latest version.\n'
     '    ${Colorize("-h, help         :   ").cyan()}Print this usage information.\n'
     '    ${Colorize("-v, version      :   ").cyan()}Print the version of all required dependencies.\n'

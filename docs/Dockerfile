@@ -11,8 +11,8 @@ FROM programmingerror/ultroid:b0.1
 ENV TZ=Asia/Kolkata
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-# Install UltroidCli ( change {version} with the latest release version )
-RUN curl "https://github.com/BLUE-DEVIL1134/UltroidCli/releases/download/{version}/ultroid.exe" -o ultroid
+# download the latest release from github
+RUN ver=$(curl https://raw.githubusercontent.com/BLUE-DEVIL1134/UltroidCli/main/version.txt) && curl -L -o ultroid https://github.com/BLUE-DEVIL1134/UltroidCli/releases/download/$ver/ultroid.exe
 
 # Clone the repository and install the dependencies
 RUN ./ultroid init

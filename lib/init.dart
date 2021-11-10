@@ -11,7 +11,7 @@ import 'package:ultroid_cli/version.dart';
 // PLease read the GNU Affero General Public License in
 // <https://www.github.com/BLUE-DEVIL1134/UltroidCli/blob/main/LICENSE/>.
 
-String selfVersion = '1.0.2';
+String selfVersion = '1.0.3';
 
 void init() async {
   if (Platform.isWindows) {

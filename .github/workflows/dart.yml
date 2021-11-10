@@ -22,10 +22,10 @@ jobs:
         run: dart pub get
       
       - name: Build Source
-        run: dart compile exe bin/ultroid_cli.dart -DDEBUG=false -o build/ultroid
+        run: dart compile exe bin/ultroid_cli.dart -DDEBUG=false -o ./ultroid
 
       - name: Upload UltrodiCli For Linux
         uses: actions/upload-artifact@v2.2.4
         with:
           name: ultorid
-          path: build/ultroid
+          path: ultroid

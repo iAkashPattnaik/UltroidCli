@@ -1,6 +1,5 @@
 ## 1.0.3
  - Fix `env` bug
- - Add linux build from github actions
  - Update docs for `env`
  - Automate build for `linux`, `windows` and `MacOS` with github actions.
 

@@ -1,3 +1,8 @@
+## 1.0.3
+ - Fix `env` bug
+ - Update docs for `env`
+ - Automate build for `linux`, `windows` and `MacOS` with github actions.
+
 ## 1.0.2
  - Add `sessionGen` function
  - Automate `build`

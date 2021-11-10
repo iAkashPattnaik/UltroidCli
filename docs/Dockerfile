@@ -21,11 +21,11 @@ RUN ./ultroid init
 RUN ./ultroid env.create new
 
 # Set the Variables in [.env] file
-RUN ./ultroid env.set API_ID $apiId
-RUN ./ultroid env.set API_HASH $apiHash
-RUN ./ultroid env.set SESSION $session
-RUN ./ultroid env.set REDIS_URI $redisUri
-RUN ./ultroid env.set REDIS_PASSWORD $redisPassword
+RUN ./ultroid env.API_ID $apiId
+RUN ./ultroid env.API_HASH $apiHash
+RUN ./ultroid env.SESSION $session
+RUN ./ultroid env.REDIS_URI $redisUri
+RUN ./ultroid env.REDIS_PASSWORD $redisPassword
 
 # Print the versions
 RUN ./ultroid version

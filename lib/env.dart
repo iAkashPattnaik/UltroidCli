@@ -31,7 +31,6 @@ void dotEnvController(List<String> cliArguments) {
       });
       break;
     default:
-      print(['ultroid', cliArguments[0], cliArguments[1]]);
       dotEnv.getDotEnv();
       dotEnv.set(cliArguments[0].split('.')[1], cliArguments[1]);
       dotEnv.saveDotEnv();

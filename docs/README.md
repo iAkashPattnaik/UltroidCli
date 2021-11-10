@@ -31,7 +31,7 @@ This is the best command so far.
 This will act as a bridge between `root://TeamUltrod/.env` and the cli.
 
 ### Various methods -
-- `ultroid env.set <key> <value>` - Append this set of data to [`root://TeamUltrod/.env`]
+- `ultroid env.<key> <value>` - Append this set of data to [`root://TeamUltrod/.env`]
 - `ultroid env.get all` - Print all the values of [`root://TeamUltrod/.env`]
 - `ultroid env.create new` - Create a new [`.env`] file
 

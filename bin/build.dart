@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:colorize/colorize.dart';
 
 void main(List<String> args) async {
-  print("Building sessionGen Executable [ ${Colorize('Python').lightGreen()} ]");
+  print("Building sessionGen Executable [ ${Colorize('Python').lightGreen()} ] [ ${Colorize('Windows').cyan()} ]");
   if (Directory('./src/build').existsSync()) {
     Directory('./src/build').deleteSync(recursive: true);
   }
@@ -21,11 +21,11 @@ void main(List<String> args) async {
     workingDirectory: Directory('./src/').absolute.uri.toFilePath()
   );
   print("Built sessionGen Executable [ ${Colorize('Python').cyan()} ] ✔️");
-  print("Building ultroid_cli Executable [ ${Colorize('Dart').lightGreen()} ]");
+  print("Building ultroid_cli Executable [ ${Colorize('Dart').lightGreen()} ] [ ${Colorize('Windows').cyan()} ]");
   Process.runSync('dart',
     ['compile', 'exe', 'bin\\ultroid_cli.dart', '-DDEBUG=false', '-o', 'build/ultroid.exe'],
     runInShell: true,
     workingDirectory: Directory('.').absolute.uri.toFilePath()
   );
-  print("Built ultroid_cli Executable [ ${Colorize('Python').cyan()} ] ✔️");
+  print("Built ultroid_cli Executable [ ${Colorize('Dart').cyan()} ] ✔️");
 }

@@ -1,3 +1,8 @@
+## 1.0.4
+ - Update docs
+ - Add `heroku` sub-command
+ - Faster `requirements` installation
+
 ## 1.0.3
  - Fix `env` bug
  - Update docs for `env`

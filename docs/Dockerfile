@@ -5,7 +5,7 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/BLUE-DEVIL1134/UltroidCli/blob/main/LICENSE/>.
 
-FROM programmingerror/ultroid:b0.1
+FROM theteamultroid/ultroid:main
 
 # Set Timezone
 ENV TZ=Asia/Kolkata

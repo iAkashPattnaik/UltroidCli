@@ -2,6 +2,10 @@ import 'dart:io';
 import 'package:colorize/colorize.dart';
 
 void main(List<String> args) async {
+  if (!Platform.isWindows) {
+    print(Colorize('This script is only for Windows.').lightRed());
+    exit(1);
+  }
   print("Building sessionGen Executable [ ${Colorize('Python').lightGreen()} ] [ ${Colorize('Windows').cyan()} ]");
   if (Directory('./src/build').existsSync()) {
     Directory('./src/build').deleteSync(recursive: true);
@@ -13,7 +17,6 @@ void main(List<String> args) async {
     ['-F', '-n', 'sessionGen', '-c', '-i', '..\\icon.ico', 'session-gen.py'],
     runInShell: true,
     workingDirectory: Directory('./src/').absolute.uri.toFilePath(),
-    // mode: ProcessStartMode.inheritStdio,
   );
   Process.runSync('cmd',
     ['/c', 'copy', 'dist\\sessionGen.exe', '..\\build\\sessionGen.exe'],

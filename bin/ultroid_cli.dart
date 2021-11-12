@@ -8,8 +8,6 @@
 import 'package:ultroid_cli/main.dart';
 import 'dart:io';
 
-import 'package:ultroid_cli/sessionGen.dart';
-
 void main(List<String> arguments) async {
   stdout.write('\x1B[2J\x1B[0;0H');
   ultroidCliVersion();
@@ -27,6 +25,7 @@ void main(List<String> arguments) async {
     '-v',
     'version',
     'run',
+    'heroku',
     'session',
     'upgrade',
     'init',
@@ -66,6 +65,9 @@ void main(List<String> arguments) async {
       break;
     case 'run':
       runUltroid();
+      break;
+    case 'heroku':
+      runUltroidHeroku();
       break;
     case 'session':
       generateSession();

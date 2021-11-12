@@ -13,6 +13,7 @@ bin/ultroid_cli.exe
 src/sessionGen.spec
 src/buildCommand.txt
 src/__pycache__/
+.vscode/settings.json
 
 # TeamUltroid
 TeamUltroid/

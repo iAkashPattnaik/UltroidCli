@@ -21,7 +21,7 @@ jobs:
         run: dart pub get
       
       - name: Build Source
-        run: dart compile exe bin/ultroid_cli.dart -DDEBUG=false -o ./ultroid-macos
+        run: dart compile exe bin/ultroid_cli.dart -DDEBUG=false -o ./ultroid-macos.app
 
       - name: Upload UltrodiCli For MacOS
         uses: actions/upload-artifact@v2.2.4

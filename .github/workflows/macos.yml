@@ -30,4 +30,5 @@ jobs:
           path: ultroid-macos.app
       
       - name: UltroidCli Version
-        run: ./ultroid-macos.app version
+        # https://stackoverflow.com/questions/1308755/launch-an-app-on-os-x-with-command-line
+        run: open ./ultroid-macos.app --args version

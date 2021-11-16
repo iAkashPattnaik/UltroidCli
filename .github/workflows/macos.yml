@@ -21,14 +21,14 @@ jobs:
         run: dart pub get
       
       - name: Build Source
-        run: dart compile exe bin/ultroid_cli.dart -DDEBUG=false -o ./ultroid-macos.app
+        run: dart compile exe bin/ultroid_cli.dart -DDEBUG=false -o ./ultroid-macos
 
       - name: Upload UltrodiCli For MacOS
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: ultroid-macos.app
-          path: ultroid-macos.app
+          name: ultroid-macos
+          path: ultroid-macos
       
       - name: UltroidCli Version
-        # https://stackoverflow.com/questions/1308755/launch-an-app-on-os-x-with-command-line
-        run: open ./ultroid-macos.app --args version
+        # https://github.com/dart-lang/samples/tree/master/native_app#readme
+        run: ./ultroid-macos version

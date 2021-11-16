@@ -30,4 +30,4 @@ jobs:
           path: ultroid-macos
       
       - name: UltroidCli Version
-        run: ./ultroid-macos version
+        run: ultroid-macos version

@@ -4,7 +4,6 @@ on:
   push:
     branches:
     - main
-    - dev
   pull_request:
     branches:
     - main
@@ -23,9 +22,10 @@ jobs:
       
       - name: Build Source
         run: dart compile exe bin/ultroid_cli.dart -DDEBUG=false -o ./ultroid-macos
+        
 
       - name: Upload UltrodiCli For MacOS
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: ultorid-macos
+          name: ultroid-macos
           path: ultroid-macos

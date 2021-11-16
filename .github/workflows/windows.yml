@@ -4,7 +4,6 @@ on:
   push:
     branches:
     - main
-    - dev
   pull_request:
     branches:
     - main
@@ -29,3 +28,6 @@ jobs:
         with:
           name: ultorid-win.exe
           path: ultroid-win.exe
+      
+      - name: UltroidCli Version
+        run: .\ultroid-win.exe version

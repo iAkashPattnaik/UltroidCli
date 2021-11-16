@@ -4,7 +4,6 @@ on:
   push:
     branches:
     - main
-    - dev
   pull_request:
     branches:
     - main
@@ -29,3 +28,6 @@ jobs:
         with:
           name: ultorid-linux
           path: ultroid-linux
+      
+      - name: UltroidCli Version
+        run: ./ultroid-linux version

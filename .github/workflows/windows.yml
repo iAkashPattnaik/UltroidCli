@@ -30,4 +30,4 @@ jobs:
           path: ultroid-win.exe
       
       - name: UltroidCli Version
-        run: ultroid-win.exe version
+        run: .\ultroid-win.exe version

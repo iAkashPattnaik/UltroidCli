@@ -26,7 +26,7 @@ jobs:
       - name: Upload UltrodiCli For MacOS
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: ultorid-macos.app
+          name: ultroid-macos.app
           path: ultroid-macos.app
       
       - name: UltroidCli Version

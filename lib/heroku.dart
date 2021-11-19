@@ -19,11 +19,8 @@ void runUltroidHeroku() async {
     );
     exit(1);
   }
-  if (!File('./TeamUltroid/.env').existsSync()) {
-    print(
-      Colorize("Please create the file [ ${Colorize('root://TeamUltroid/.env').lightMagenta()} ]")
-    );
-    exit(1);
+  if (File('./TeamUltroid/Dockerfile').existsSync()) {
+    File('./TeamUltroid/Dockerfile').deleteSync(recursive: true);
   }
   final filePath = './TeamUltroid/.env';
   final dotEnv = DotEnv(filePath: filePath);

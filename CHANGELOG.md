@@ -7,7 +7,7 @@
  - Update Docs for `secondary commands`
  
  ## 1.0.4
- - Update docs for `heroku` command
+ - Update docs
  - Add heroku sub-command
  - Faster requirements installation
 

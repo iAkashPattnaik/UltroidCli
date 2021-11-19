@@ -5,6 +5,7 @@
 // PLease read the GNU Affero General Public License in
 // <https://www.github.com/BLUE-DEVIL1134/UltroidCli/blob/main/LICENSE/>.
 
+import 'package:colorize/colorize.dart';
 import 'package:ultroid_cli/main.dart';
 import 'dart:io';
 
@@ -30,7 +31,10 @@ void main(List<String> arguments) async {
     'upgrade',
     'init',
     'delete',
-    'env'
+    'env',
+    'docs',
+    'support',
+    'twitter'
   ]) {
     if (!query.toLowerCase().startsWith(i)) {
       temp = 'help';
@@ -77,6 +81,18 @@ void main(List<String> arguments) async {
       break;
     case 'env':
       dotEnvController(arguments);
+      break;
+    case 'docs':
+      urlLauncher('Docs', 'https://ultroid.tech');
+      break;
+    case 'support':
+      urlLauncher('Support', 'https://telegram.dog/TheUltroid');
+      print("[ ${Colorize('Advice').lightGreen()} ] - Join for latest updates !");
+      break;
+    case 'twitter':
+      urlLauncher('Twitter', 'https://twitter.com/AKASH_AM1');
+      urlLauncher('Twitter', 'https://twitter.com/TheUltroid');
+      print("[ ${Colorize('Advice').lightGreen()} ] - Follow for latest updates !");
       break;
     default:
       printHelp();

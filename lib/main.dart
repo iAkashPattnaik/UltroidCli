@@ -20,6 +20,7 @@ export 'package:ultroid_cli/delete.dart';
 export 'package:ultroid_cli/env.dart';
 export 'package:ultroid_cli/heroku.dart';
 export 'package:ultroid_cli/sessionGen.dart';
+export 'package:ultroid_cli/url_launcher.dart';
 
 
 void ultroidCliVersion() async {
@@ -27,7 +28,7 @@ void ultroidCliVersion() async {
     var req = await get(
       Uri.parse('https://raw.githubusercontent.com/BLUE-DEVIL1134/UltroidCli/main/version.txt'),
     );
-    if (req.body.trim() != '1.0.4') {
+    if (req.body.trim() != '1.0.5') {
       print(
         "  ${Colorize('╔══════════════════════════════════════════════════════════════════════════╗').cyan()}\n"
         "  ${Colorize('║').cyan()} A new version of UltroidCli is available!                                ${Colorize('║').cyan()}\n"

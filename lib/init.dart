@@ -10,7 +10,7 @@ import 'dart:io';
 
 import 'package:ultroid_cli/version.dart';
 
-String selfVersion = '1.0.4';
+String selfVersion = '1.0.5';
 
 void init() async {
   if (Platform.isWindows) {

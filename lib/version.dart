@@ -35,7 +35,7 @@ void version() async {
     "Dart version • ${dartVersion != '' ? Colorize(dartVersion).cyan() : Colorize('Dart Not Installed').red()}\n"
     "Python version • ${pythonVersion != '' ? Colorize(pythonVersion).cyan() : Colorize('Python Not Installed').red()}"
     "Pip version • ${pipVersion != '' ? Colorize(pipVersion).cyan() : Colorize('Pip Not Installed').red()}\n"
-    "UltroidCli version • ${Colorize('1.0.4').cyan()}\n"
+    "UltroidCli version • ${Colorize('1.0.5').cyan()}\n"
     'Platform • ${Colorize(Platform.operatingSystem).cyan()}\n'
     '\n'
     "This Project is opensource and is maintained by Akash Pattnaik [ ${Colorize('github.com/BLUE-DEVIL1134').lightMagenta()} ]\n"

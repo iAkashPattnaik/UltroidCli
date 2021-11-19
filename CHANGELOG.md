@@ -1,7 +1,15 @@
-## 1.0.4
+## 1.0.5
+ - Add Secondary Commands
+   - `ultroid docs`
+   - `ultroid twitter`
+   - `ultroid support`
+ - Fix Heroku Env Error [ #9 ]
+ - Update Docs for `secondary commands`
+ 
+ ## 1.0.4
  - Update docs
- - Add `heroku` sub-command
- - Faster `requirements` installation
+ - Add heroku sub-command
+ - Faster requirements installation
 
 ## 1.0.3
  - Fix `env` bug

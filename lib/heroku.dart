@@ -32,13 +32,7 @@ void runUltroidHeroku() async {
     print(Colorize('[.env] file found ! [ ${Colorize(filePath).lightGreen()} ${Colorize("]").cyan()}').cyan());
   }
   dotEnv.getDotEnv();
-  dotEnv.set('API_ID', Platform.environment['apiId']!);
-  dotEnv.set('API_HASH', Platform.environment['apiHash']!);
-  dotEnv.set('SESSION', Platform.environment['session']!);
-  dotEnv.set('REDIS_URI', Platform.environment['redisUri']!);
-  dotEnv.set('REDIS_PASSWORD', Platform.environment['redisPassword']!);
-  dotEnv.set('HEROKU_API', Platform.environment['herokuApi']!);
-  dotEnv.set('HEROKU_APP_NAME', Platform.environment['herokuAppName']!);
+  dotEnv.set('UltroidCli', 'https://github.com/BLUE-DEVIL1134/UltroidCli/');
   dotEnv.saveDotEnv();
   await Process.start(
     'python',

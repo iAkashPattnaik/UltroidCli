@@ -28,7 +28,7 @@ void ultroidCliVersion() async {
     var req = await get(
       Uri.parse('https://raw.githubusercontent.com/BLUE-DEVIL1134/UltroidCli/main/version.txt'),
     );
-    if (req.body.trim() != '1.0.5') {
+    if (req.body.trim() != '1.0.6') {
       print(
         "  ${Colorize('╔══════════════════════════════════════════════════════════════════════════╗').cyan()}\n"
         "  ${Colorize('║').cyan()} A new version of UltroidCli is available!                                ${Colorize('║').cyan()}\n"

@@ -14,7 +14,7 @@ import 'package:ultroid_cli/version.dart';
 void deleteUltroid() async {
   final rootDirectory = Directory('./TeamUltroid');
   if (!rootDirectory.existsSync()) {
-    print('\"Ultroid\" at [ ${C"root://TeamUltroid".brightMagenta} ] does not exist !'.cyan);
+    print('\"Ultroid\" at [ ${"root://TeamUltroid".brightMagenta} ] does not exist !'.cyan);
   } else {
     print('Removing \"Ultroid\" at [ ${"root://TeamUltroid".brightMagenta} ]'.cyan);
     rootDirectory.deleteSync(recursive: true);

@@ -1,11 +1,11 @@
 // UltroidCli
-// Copyright (C) 2021 Akash Pattnaik
+// Copyright (C) 2022 Akash Pattnaik
 //
 // This file is a part of < https://github.com/BLUE-DEVIL1134/UltroidCli/ >
 // PLease read the GNU Affero General Public License in
 // <https://www.github.com/BLUE-DEVIL1134/UltroidCli/blob/main/LICENSE/>.
 
-import 'package:colorize/colorize.dart';
+import 'package:colorx/colorx.dart';
 import 'dart:io';
 
 import 'package:dart_dotenv/dart_dotenv.dart';
@@ -14,8 +14,8 @@ void runUltroidHeroku() async {
   final rootDirectory = Directory('./TeamUltroid');
   if (!rootDirectory.existsSync()) {
     print(
-      "[ ${Colorize('root://TeamUltroid').lightMagenta()} ] does not exists.\n"
-      "Run [ ${Colorize('ultroid init').lightGreen()} ] first to install the repository and dependencies."
+      "[ ${'root://TeamUltroid'.brightMagenta} ] does not exists.\n"
+      "Run [ ${'ultroid init'.brightGreen} ] first to install the repository and dependencies."
     );
     exit(1);
   }
@@ -25,11 +25,11 @@ void runUltroidHeroku() async {
   final filePath = './TeamUltroid/.env';
   final dotEnv = DotEnv(filePath: filePath);
   if (!dotEnv.exists()) {
-    print(Colorize('[.env] file not found ! [ ${Colorize(filePath).lightGreen()} ${Colorize("]").lightRed()}').lightRed());
+    print('[.env] file not found ! [ ${filePath.brightGreen} ${"]".brightRed}'.brightRed);
     dotEnv.createNew(recrusive: true);
-    print(Colorize('New [.env] file created ! [ ${Colorize(filePath).lightGreen()} ${Colorize("]").cyan()}').cyan());
+    print('New [.env] file created ! [ ${filePath.brightGreen} ${"]".cyan}'.cyan);
   } else {
-    print(Colorize('[.env] file found ! [ ${Colorize(filePath).lightGreen()} ${Colorize("]").cyan()}').cyan());
+    print('[.env] file found ! [ ${filePath.brightGreen} ${"]".cyan}'.cyan);
   }
   dotEnv.getDotEnv();
   dotEnv.set('UltroidCli', 'https://github.com/BLUE-DEVIL1134/UltroidCli/');

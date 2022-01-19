@@ -1,16 +1,16 @@
 // UltroidCli
-// Copyright (C) 2021 Akash Pattnaik
+// Copyright (C) 2022 Akash Pattnaik
 //
 // This file is a part of < https://github.com/BLUE-DEVIL1134/UltroidCli/ >
 // PLease read the GNU Affero General Public License in
 // <https://www.github.com/BLUE-DEVIL1134/UltroidCli/blob/main/LICENSE/>.
 
-import 'package:colorize/colorize.dart';
+import 'package:colorx/colorx.dart';
 import 'dart:io';
 
 import 'package:ultroid_cli/version.dart';
 
-String selfVersion = '1.0.6';
+String selfVersion = '1.0.7';
 
 void init() async {
   if (Platform.isWindows) {
@@ -39,9 +39,9 @@ void init() async {
   final rootDirectory = Directory('./TeamUltroid');
   if (!rootDirectory.existsSync()) {
     print(
-      "${Colorize('Installing Ultroid to [ ').cyan()}"
-      "${Colorize('root://TeamUltroid/').lightMagenta()}"
-      "${Colorize(' ]').cyan()}"
+      "${'Installing Ultroid to [ '.cyan}"
+      "${'root://TeamUltroid/'.brightMagenta}"
+      "${' ]'.cyan}"
     );
     await Process.run(
       'git',
@@ -49,14 +49,14 @@ void init() async {
       runInShell: true
     );
     print(
-      "${Colorize('Successfully Installed Ultroid to [ ').cyan()}"
-      "${Colorize('root://TeamUltroid/').lightMagenta()}"
-      "${Colorize(' ]').cyan()}"
+      "${'Successfully Installed Ultroid to [ '.cyan}"
+      "${'root://TeamUltroid/'.brightMagenta}"
+      "${' ]'.cyan}"
     );
     print(
-      "${Colorize('Installing Ultroid Dependencies [ ').cyan()}"
-      "${Colorize('root://TeamUltroid/requirements.txt').lightMagenta()}"
-      "${Colorize(' ]').cyan()}"
+      "${'Installing Ultroid Dependencies [ '.cyan}"
+      "${'root://TeamUltroid/requirements.txt'.brightMagenta}"
+      "${' ]'.cyan}"
     );
     await Process.run(
       'pip',
@@ -71,11 +71,11 @@ void init() async {
       workingDirectory: Directory('./TeamUltroid/resources/startup').absolute.uri.toFilePath()
     );
     print(
-      "${Colorize('Successfully Installed Ultroid Dependencies [ ').cyan()}"
-      "${Colorize('root://TeamUltroid/requirements.txt').lightMagenta()}"
-      "${Colorize(' ]').cyan()}"
+      "${'Successfully Installed Ultroid Dependencies [ '.cyan}"
+      "${'root://TeamUltroid/requirements.txt'.brightMagenta}"
+      "${' ]'.cyan}"
     );
   }
   version();
-  print(Colorize('To run Ultroid, use the command [ ultroid run ]').lightGreen());
+  print('To run Ultroid, use the command [ ultroid run ]'.brightGreen);
 }

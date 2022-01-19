@@ -1,5 +1,5 @@
 // UltroidCli
-// Copyright (C) 2021 Akash Pattnaik
+// Copyright (C) 2022 Akash Pattnaik
 //
 // This file is a part of < https://github.com/BLUE-DEVIL1134/UltroidCli/ >
 // PLease read the GNU Affero General Public License in
@@ -7,7 +7,7 @@
 
 import 'dart:io';
 
-import 'package:colorize/colorize.dart';
+import 'package:colorx/colorx.dart';
 
 void generateSession() async {
   final sessionGenAppWin = File('./sessionGen.exe');
@@ -28,8 +28,8 @@ void generateSession() async {
     );
   } else { 
     print(
-      "[ ${Colorize('root://sessionGen [.exe]').lightMagenta()} ] does not exists.\n"
-      "Run [ ${Colorize('ultroid init').lightGreen()} ] first to install the required dependencies."
+      "[ ${'root://sessionGen [.exe]'.brightMagenta} ] does not exists.\n"
+      "Run [ ${'ultroid init'.brightGreen} ] first to install the required dependencies."
     );
     exit(1);
   }

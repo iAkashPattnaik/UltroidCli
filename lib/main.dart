@@ -1,5 +1,5 @@
 // UltroidCli
-// Copyright (C) 2021 Akash Pattnaik
+// Copyright (C) 2022 Akash Pattnaik
 //
 // This file is a part of < https://github.com/BLUE-DEVIL1134/UltroidCli/ >
 // PLease read the GNU Affero General Public License in
@@ -7,7 +7,7 @@
 
 library ultroid_cli;
 
-import 'package:colorize/colorize.dart';
+import 'package:colorx/colorx.dart';
 import 'package:http/http.dart';
 
 // Ultroid
@@ -30,11 +30,11 @@ void ultroidCliVersion() async {
     );
     if (req.body.trim() != '1.0.6') {
       print(
-        "  ${Colorize('╔══════════════════════════════════════════════════════════════════════════╗').cyan()}\n"
-        "  ${Colorize('║').cyan()} A new version of UltroidCli is available!                                ${Colorize('║').cyan()}\n"
-        "  ${Colorize('║').cyan()}                                                                          ${Colorize('║').cyan()}\n"
-        "  ${Colorize('║').cyan()} Please download the lastest release.                                     ${Colorize('║').cyan()}\n"
-        "  ${Colorize('╚══════════════════════════════════════════════════════════════════════════╝').cyan()}"
+        "  ${'╔══════════════════════════════════════════════════════════════════════════╗'.cyan}\n"
+        "  ${'║'.cyan} A new version of UltroidCli is available!                                ${'║'.cyan}\n"
+        "  ${'║'.cyan}                                                                          ${'║'.cyan}\n"
+        "  ${'║'.cyan} Please download the lastest release.                                     ${'║'.cyan}\n"
+        "  ${'╚══════════════════════════════════════════════════════════════════════════╝'.cyan}"
       );
     }
   } catch (error) {

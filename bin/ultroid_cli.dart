@@ -1,11 +1,11 @@
 // UltroidCli
-// Copyright (C) 2021 Akash Pattnaik
+// Copyright (C) 2022 Akash Pattnaik
 //
 // This file is a part of < https://github.com/BLUE-DEVIL1134/UltroidCli/ >
 // PLease read the GNU Affero General Public License in
 // <https://www.github.com/BLUE-DEVIL1134/UltroidCli/blob/main/LICENSE/>.
 
-import 'package:colorize/colorize.dart';
+import 'package:colorx/colorx.dart';
 import 'package:ultroid_cli/main.dart';
 import 'dart:io';
 
@@ -87,12 +87,12 @@ void main(List<String> arguments) async {
       break;
     case 'support':
       urlLauncher('Support', 'https://telegram.dog/TheUltroid');
-      print("[ ${Colorize('Advice').lightGreen()} ] - Join for latest updates !");
+      print("[ ${'Advice'.brightGreen} ] - Join for latest updates !");
       break;
     case 'twitter':
       urlLauncher('Twitter', 'https://twitter.com/AKASH_AM1');
       urlLauncher('Twitter', 'https://twitter.com/TheUltroid');
-      print("[ ${Colorize('Advice').lightGreen()} ] - Follow for latest updates !");
+      print("[ ${'Advice'.brightGreen} ] - Follow for latest updates !");
       break;
     default:
       printHelp();

@@ -1,11 +1,11 @@
 // UltroidCli
-// Copyright (C) 2021 Akash Pattnaik
+// Copyright (C) 2022 Akash Pattnaik
 //
 // This file is a part of < https://github.com/BLUE-DEVIL1134/UltroidCli/ >
 // PLease read the GNU Affero General Public License in
 // <https://www.github.com/BLUE-DEVIL1134/UltroidCli/blob/main/LICENSE/>.
 
-import 'package:colorize/colorize.dart';
+import 'package:colorx/colorx.dart';
 import 'dart:io';
 
 void version() async {
@@ -16,8 +16,12 @@ void version() async {
   var pythonVersionProcess = await Process.run('python', ['-V'], runInShell: true);
   var pipVersionProcess = await Process.run('pip', ['-V', '--no-input'], runInShell: true);
   if (dartVersionProcess.stderr != null && dartVersionProcess.exitCode == 0) {
-    // Dart prints the version to stderr
-    dartVersion = dartVersionProcess.stderr.toString().split(' ')[3];
+    try {
+      // Dart prints the version to stderr, (happened to me on windows) !
+      dartVersion = dartVersionProcess.stderr.toString().split(' ')[3];
+    } catch (error) {
+      dartVersion = dartVersionProcess.stdout.toString().split(' ')[3];
+    }
   } else {
     dartVersion = '';
   }
@@ -32,18 +36,18 @@ void version() async {
     pipVersion = '';
   }
   print(
-    "Dart version • ${dartVersion != '' ? Colorize(dartVersion).cyan() : Colorize('Dart Not Installed').red()}\n"
-    "Python version • ${pythonVersion != '' ? Colorize(pythonVersion).cyan() : Colorize('Python Not Installed').red()}"
-    "Pip version • ${pipVersion != '' ? Colorize(pipVersion).cyan() : Colorize('Pip Not Installed').red()}\n"
-    "UltroidCli version • ${Colorize('1.0.6').cyan()}\n"
-    'Platform • ${Colorize(Platform.operatingSystem).cyan()}\n'
+    "Dart version • ${dartVersion != '' ? dartVersion.cyan : 'Dart Not Installed'.red}\n"
+    "Python version • ${pythonVersion != '' ? pythonVersion.cyan : 'Python Not Installed'.red}"
+    "Pip version • ${pipVersion != '' ? pipVersion.cyan : 'Pip Not Installed'.red}\n"
+    "UltroidCli version • ${'1.0.7'.cyan}\n"
+    'Platform • ${Platform.operatingSystem.cyan}\n'
     '\n'
-    "This Project is opensource and is maintained by Akash Pattnaik [ ${Colorize('github.com/BLUE-DEVIL1134').lightMagenta()} ]\n"
-    "The Source code can be found at • [ ${Colorize('github.com/BLUE-DEVIL1134/UltroidCli').lightMagenta()} ]"
+    "This Project is opensource and is maintained by Akash Pattnaik [ ${'github.com/BLUE-DEVIL1134'.brightMagenta} ]\n"
+    "The Source code can be found at • [ ${'github.com/BLUE-DEVIL1134/UltroidCli'.brightMagenta} ]"
   );
   print(
     pythonVersion != '' ?
-    "You are ${Colorize('good to run').lightGreen()} Ultroid" :
-    "Please ${Colorize('Install').lightGreen()} ${Colorize('Python 3.9.5+').red()} To Use ${Colorize('Ultroid').lightMagenta()}"
+    "You are ${'good to run'.brightGreen} Ultroid" :
+    "Please ${'Install'.brightGreen} ${'Python 3.9.7+'.red} To Use ${'Ultroid'.brightMagenta}"
   );
 }

@@ -1,39 +1,39 @@
 // UltroidCli
-// Copyright (C) 2021 Akash Pattnaik
+// Copyright (C) 2022 Akash Pattnaik
 //
 // This file is a part of < https://github.com/BLUE-DEVIL1134/UltroidCli/ >
 // PLease read the GNU Affero General Public License in
 // <https://www.github.com/BLUE-DEVIL1134/UltroidCli/blob/main/LICENSE/>.
 
 import 'package:dart_dotenv/dart_dotenv.dart';
-import 'package:colorize/colorize.dart';
+import 'package:colorx/colorx.dart';
 
 void dotEnvController(List<String> cliArguments) {
   final filePath = './TeamUltroid/.env';
   final dotEnv = DotEnv(filePath: filePath);
   if (!dotEnv.exists()) {
-    print(Colorize('Env file not found ! [ ${Colorize(filePath).lightGreen()} ${Colorize("]").lightRed()}').lightRed());
+    print('Env file not found ! [ ${filePath.brightGreen} ${"]".brightRed}'.brightRed);
   }
   if (cliArguments.length < 2 && cliArguments[0].contains('.')) {
-    return print(Colorize('Usage: ${Colorize("ultroid env.<key> <value>").cyan()}').lightRed());
+    return print('Usage: ${"ultroid env.<key> <value>".cyan}'.brightRed);
   }
   if (cliArguments[0].split('.')[1] == '') {
-    return print(Colorize('Error: Invalid key supplied !').lightRed());
+    return print('Error: Invalid key supplied !'.brightRed);
   }
   switch (cliArguments[0].split('.')[1]) {
     case 'create':
       dotEnv.createNew(recrusive: true);
-      print(Colorize('New env file created ! [ ${Colorize(filePath).lightGreen()} ${Colorize("]").cyan()}').cyan());
+      print('New env file created ! [ ${filePath.brightGreen} ${"]".cyan}'.cyan);
       break;
     case 'get':
       dotEnv.getDotEnv().forEach((String key, String value) {
-        print(Colorize(key).lightMagenta().toString() + ' -> ' + Colorize(value).lightGreen().toString());
+        print('${key.brightMagenta} -> ${value.brightGreen}');
       });
       break;
     default:
       dotEnv.getDotEnv();
       dotEnv.set(cliArguments[0].split('.')[1], cliArguments[1]);
       dotEnv.saveDotEnv();
-      print(Colorize('Key "${Colorize(cliArguments[0].split('.')[1]).green()}${Colorize('"').cyan()} ${Colorize("has been saved to [ ${Colorize(filePath).lightMagenta()}").cyan().default_slyle()} ${Colorize("]").cyan()}').cyan());
+      print('Key "${cliArguments[0].split('.')[1].green}${'"'.cyan} ${"has been saved to [ ${filePath.brightMagenta}".cyan} ${"]".cyan}'.cyan);
   }
 }

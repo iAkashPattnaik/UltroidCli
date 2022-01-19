@@ -1,3 +1,11 @@
+## 1.0.7
+ - Use [ColorX](https://pub.dev/packages/colorx) instead of [Colorize](https://pub.dev/packages/colorize).
+ - Fix `upgrade` command.
+ - Update (C) Copyright year to `2022`.
+
+## 1.0.6
+ - Fix Heroku Bug ( mostly after restart/update )
+
 ## 1.0.5
  - Add Secondary Commands
    - `ultroid docs`
@@ -6,7 +14,7 @@
  - Fix Heroku Env Error [ #9 ]
  - Update Docs for `secondary commands`
  
- ## 1.0.4
+## 1.0.4
  - Update docs
  - Add heroku sub-command
  - Faster requirements installation
